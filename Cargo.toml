@@ -1,14 +1,15 @@
 [package]
-name = "rstop"
+name = "crabtop"
 version = "0.1.0"
 edition = "2021"
 authors = ["Pedro Henrique dos Santos Cunha"]
 description = "Terminal-based Linux system monitor with CPU, memory, GPU and thermal metrics"
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/Shnrqpdr/rstop"
+repository = "https://github.com/Shnrqpdr/crabtop"
 keywords = ["tui", "monitor", "system", "htop", "cli"]
 categories = ["command-line-utilities", "visualization"]
+exclude = ["CLAUDE.md"]
 
 [features]
 default = ["nvidia"]
@@ -33,5 +34,5 @@ codegen-units = 1
 strip = true
 
 [[bin]]
-name = "rstop"
+name = "crabtop"
 path = "src/main.rs"

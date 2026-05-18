@@ -1,4 +1,4 @@
-# rstop
+# crabtop
 
 A terminal system monitor for Linux. It shows CPU, memory, GPU, and temperatures
 as live line charts over time, so a sudden spike is something you can actually
@@ -13,7 +13,7 @@ see instead of a number that flickers for one refresh and is gone.
 ## Why another monitor
 
 htop is great at "what is using my machine right now." It is less good at "what
-happened ten seconds ago." rstop defaults to the second question: every panel is
+happened ten seconds ago." crabtop defaults to the second question: every panel is
 a line chart against time. If you want the htop-style per-core breakdown, it is
 one flag away (`--cpu-cores`, or `-d` for everything), but it is not the default.
 
@@ -26,7 +26,7 @@ for the dependencies; use [rustup](https://rustup.rs) and a current stable.
 cargo install --path .
 ```
 
-That drops the `rstop` binary in `~/.cargo/bin` (already on your PATH if you
+That drops the `crabtop` binary in `~/.cargo/bin` (already on your PATH if you
 installed via rustup). After changing the code, re-run with `--force`.
 
 No NVIDIA card, or building somewhere without NVML? Turn the GPU code off:
@@ -38,10 +38,10 @@ cargo install --path . --no-default-features
 ## Usage
 
 ```sh
-rstop                 # aggregate line charts, ~1.5s refresh
-rstop -d              # every panel in its detailed form
-rstop --cpu-cores     # detail one panel, leave the rest as charts
-rstop --interval 100 --history 1500   # fine-grained, ~2.5 min window
+crabtop                 # aggregate line charts, ~1.5s refresh
+crabtop -d              # every panel in its detailed form
+crabtop --cpu-cores     # detail one panel, leave the rest as charts
+crabtop --interval 100 --history 1500   # fine-grained, ~2.5 min window
 ```
 
 | Flag | Default | What it does |
@@ -87,7 +87,7 @@ will say so rather than invent numbers. On bare metal it works.
 
 **GPU** support is NVIDIA via NVML, behind the `nvidia` feature (on by default).
 NVML normally loads `libnvidia-ml.so`, which does not exist on WSL — there you
-only get `/usr/lib/wsl/lib/libnvidia-ml.so.1`. rstop tries the plain name first
+only get `/usr/lib/wsl/lib/libnvidia-ml.so.1`. crabtop tries the plain name first
 and then falls back to the versioned soname and the WSL path, so a working
 `nvidia-smi` should mean a working GPU panel. To check detection without opening
 the UI:
@@ -101,7 +101,7 @@ AMD and Intel GPUs are not supported yet.
 ## Building from source
 
 ```sh
-cargo build --release      # ./target/release/rstop, stripped + thin LTO
+cargo build --release      # ./target/release/crabtop, stripped + thin LTO
 cargo test                 # gpu_probe just prints what NVML finds; it never fails
 ```
 

@@ -44,7 +44,7 @@ fn render_header(frame: &mut Frame, area: Rect, state: &AppState) {
     };
     let paused = if state.paused { "  •  [PAUSED]" } else { "" };
     let title = format!(
-        " rstop  •  interval {}ms  •  history {}  •  detailed: {}{}",
+        " crabtop  •  interval {}ms  •  history {}  •  detailed: {}{}",
         state.config.interval.as_millis(),
         state.config.history,
         detailed,
