@@ -30,5 +30,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Optional `nvidia` Cargo feature (enabled by default) so the binary builds
   and runs without NVML present.
 
-[Unreleased]: https://github.com/Shnrqpdr/rstop/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/Shnrqpdr/rstop/releases/tag/v0.1.0
+[Unreleased]: https://github.com/Shnrqpdr/crabtop/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/Shnrqpdr/crabtop/releases/tag/v0.1.0

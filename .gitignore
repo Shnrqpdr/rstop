@@ -8,4 +8,7 @@
 *.swp
 .DS_Store
 
-# Cargo.lock is intentionally tracked: rstop ships as a binary.
+# Claude Code working notes — not part of the published project.
+CLAUDE.md
+
+# Cargo.lock is intentionally tracked: crabtop ships as a binary.

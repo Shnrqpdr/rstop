@@ -3,7 +3,7 @@ use std::time::Duration;
 use clap::Parser;
 
 #[derive(Debug, Clone, Parser)]
-#[command(name = "rstop", version, about = "Linux TUI system monitor")]
+#[command(name = "crabtop", version, about = "Linux TUI system monitor")]
 pub struct CliArgs {
     /// Polling interval in milliseconds (htop's default is 1500)
     #[arg(short, long, default_value_t = 1500)]
