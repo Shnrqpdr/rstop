@@ -6,7 +6,7 @@ authors = ["Pedro Henrique dos Santos Cunha"]
 description = "Terminal-based Linux system monitor with CPU, memory, GPU and thermal metrics"
 license = "MIT"
 readme = "README.md"
-# repository = "<REPO_URL>"  # TODO: set before `cargo publish`
+repository = "https://github.com/Shnrqpdr/rstop"
 keywords = ["tui", "monitor", "system", "htop", "cli"]
 categories = ["command-line-utilities", "visualization"]
 
